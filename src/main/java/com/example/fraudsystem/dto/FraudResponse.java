@@ -2,7 +2,6 @@ package com.example.fraudsystem.dto;
 
 import com.example.fraudsystem.enums.FraudStatus;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
