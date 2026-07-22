@@ -1,0 +1,20 @@
+image: maven:3.9.6-eclipse-temurin-25
+
+pipelines:
+  default:
+    - step:
+        name: Build and Push Fraud Service
+        services:
+          - docker
+        caches:
+          - maven
+        script:
+          - mvn clean package
+          - docker build -t abusayath/fraud-service:1.0 .
+          - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          - docker push abusayath/fraud-service:1.0
+
+definitions:
+  services:
+    docker:
+      memory: 2048
