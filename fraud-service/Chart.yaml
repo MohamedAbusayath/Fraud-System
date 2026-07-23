@@ -1,0 +1,7 @@
+apiVersion: v2
+name: fraud-service
+description: Helm chart for Fraud Service
+type: application
+
+version: 0.1.0
+appVersion: "1.0"
